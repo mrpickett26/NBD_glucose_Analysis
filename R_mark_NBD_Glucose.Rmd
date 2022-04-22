@@ -28,7 +28,7 @@ mean_tot_N2_231_AM_Day3<- (sum(d_nbd_n2_AM_231_meanint$meanIntnbd1/d_draq_n2_AM_
 
 ```
 
-##
+
 
 ```{r}
 ## DAY 3, RM, N2, 231
