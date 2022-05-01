@@ -500,6 +500,7 @@ mean_total_RandomMat_Day5<-(mean_tot_N1_231_RM_Day5+mean_tot_N2_231_RM_Day5+mean
 df3<- c(mean_total_Random_Day3, mean_total_Aligned_Day3, mean_total_RandomMat_Day3, mean_total_AlignedMat_Day3)
 df5<- c(mean_total_Random_Day5, mean_total_Aligned_Day5, mean_total_RandomMat_Day5, mean_total_AlignedMat_Day5)
 
+
 barplot(df3, main="Average Integrated Intensity per Nuclei 231 Day 3", names.arg =c( "Random","Aligned","RM","AM"), ylab="Integrated Intensity", col=c("#eb8060", "#b9e38d", "#a1e9f0", "#d9b1f0"))
 
 barplot(df5, main="Average Integrated Intensity per Nuclei 231 Day 5", names.arg =c("Random","Aligned","RM","AM"), ylab="Integrated Intensity", col=c("#eb8060", "#b9e38d", "#a1e9f0", "#d9b1f0"))
