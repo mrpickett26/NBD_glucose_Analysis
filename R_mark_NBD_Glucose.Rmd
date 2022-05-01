@@ -486,12 +486,23 @@ mean_tot_N3_231_R_Day3<- (sum(d_nbd_n3_R3_231_meanint$meanIntnbd1/d_draq_n3_R3_2
 
 ```{r plot}
 #plot the data
-df3<- c(mean_tot_N2_231_A_Day3, mean_tot_N2_231_R_Day3, mean_tot_N2_231_AM_Day3, mean_tot_N2_231_RM_Day3)
-df5<- c(mean_tot_N2_231_A_Day5, mean_tot_N2_231_R_Day5, mean_tot_N2_231_AM_Day5, mean_tot_N2_231_RM_Day5)
+mean_total_Aligned_Day3<- (mean_tot_N1_231_A_Day3+ mean_tot_N2_231_A_Day3+ mean_tot_N3_231_A_Day3)/3
+mean_total_Random_Day3<- (mean_tot_N1_231_R_Day3+ mean_tot_N2_231_R_Day3+ mean_tot_N3_231_R_Day3)/3
+mean_total_AlignedMat_Day3<-(mean_tot_N1_231_AM_Day3+mean_tot_N2_231_AM_Day3+mean_tot_N3_231_AM_Day3)/3
+mean_total_RandomMat_Day3<-(mean_tot_N1_231_RM_Day3+mean_tot_N2_231_RM_Day3+mean_tot_N3_231_RM_Day3)/3
 
-barplot(df3, main="Average Integrated Intensity per Nuclei 231 N=2 Day 3", names.arg =c( "A","R","AM","RM"), ylab="Integrated Intensity", col=c("#eb8060", "#b9e38d", "#a1e9f0", "#d9b1f0"))
 
-barplot(df5, main="Average Integrated Intensity per Nuclei 231 N=2 Day 5", names.arg =c( "A","R","AM","RM"), ylab="Integrated Intensity", col=c("#eb8060", "#b9e38d", "#a1e9f0", "#d9b1f0"))
+mean_total_Aligned_Day5<- (mean_tot_N1_231_A_Day5+ mean_tot_N2_231_A_Day5+ mean_tot_N3_231_A_Day5)/3
+mean_total_Random_Day5<- (mean_tot_N1_231_R_Day5+ mean_tot_N2_231_R_Day5+ mean_tot_N3_231_R_Day5)/3
+mean_total_AlignedMat_Day5<-(mean_tot_N1_231_AM_Day5+mean_tot_N2_231_AM_Day5+mean_tot_N3_231_R_Day5)/3
+mean_total_RandomMat_Day5<-(mean_tot_N1_231_RM_Day5+mean_tot_N2_231_RM_Day5+mean_tot_N3_231_RM_Day5)/3
+
+df3<- c(mean_total_Random_Day3, mean_total_Aligned_Day3, mean_total_RandomMat_Day3, mean_total_AlignedMat_Day3)
+df5<- c(mean_total_Random_Day5, mean_total_Aligned_Day5, mean_total_RandomMat_Day5, mean_total_AlignedMat_Day5)
+
+barplot(df3, main="Average Integrated Intensity per Nuclei 231 Day 3", names.arg =c( "Random","Aligned","RM","AM"), ylab="Integrated Intensity", col=c("#eb8060", "#b9e38d", "#a1e9f0", "#d9b1f0"))
+
+barplot(df5, main="Average Integrated Intensity per Nuclei 231 Day 5", names.arg =c("Random","Aligned","RM","AM"), ylab="Integrated Intensity", col=c("#eb8060", "#b9e38d", "#a1e9f0", "#d9b1f0"))
 
 #timescale of NvD uptake and vimentin 
 # XPS for matrigel thickness, look at core facility 
