@@ -407,7 +407,7 @@ mean_tot_N3_231_A_Day5<- (sum(d_nbd_n3_A5_231_meanint$meanIntnbd1/d_draq_n3_A5_2
 ```{r D3 A N3}
 library(tidyverse)
 n21<- "https://raw.githubusercontent.com/mrpickett26/NBD_glucose_Analysis/main/A_DAY3_231_N3_NBDglucose.csv"
-d_nbd_n2_A3_231<-read_csv(n21, col_names=TRUE)
+d_nbd_n3_A3_231<-read_csv(n21, col_names=TRUE)
 d21<- "https://raw.githubusercontent.com/mrpickett26/NBD_glucose_Analysis/main/A_DAY3_231_N3_Draq5_nucleus.csv"
 d_draq_n3_A3_231<-read_csv(d21, col_names=TRUE)
 
